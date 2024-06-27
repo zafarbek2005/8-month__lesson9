@@ -35,7 +35,7 @@ const Product = () => {
         <div className="product_cart" key={product.id}>
             <img src={product.urls[0]} alt={product.name} />
             <h3>{product.name}</h3>
-            <span><Rating value={product.rating} readOnly /></span>
+            <span><Rating/></span>
             <div className="price">
                 <span>${product.oldPrice.toLocaleString()}</span>
                 <span>${product.price.toLocaleString()}</span>
