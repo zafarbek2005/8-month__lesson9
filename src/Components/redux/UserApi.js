@@ -7,8 +7,16 @@ export const productApi = api.injectEndpoints({
       query: (params) => ({ 
         url: '/products/search', 
         params 
-      }),
+      }), 
       providesTags:["Product"]
+    }),
+
+    getUsers: build.query({
+      query: (params) => ({
+        url: "/users/search",
+        params,
+      }),
+      providesTags: ["User"],
     }),
 
     postSignIn: build.mutation({
@@ -26,5 +34,6 @@ export const productApi = api.injectEndpoints({
 
 export const {
   usePostSignInMutation,
+  useGetUsersQuery,
   useGetProductsQuery,
 } = productApi
