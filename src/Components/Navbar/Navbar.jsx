@@ -18,20 +18,24 @@ const Navbar = () => {
       <header>
         <div className="Navbar container">
           <div className="logo">
-            <img src={Logo} alt="Logo" />
+         <a href="/">
+           <img src={Logo} alt="Logo" />
+          </a>
           </div>
 
           <div className={`items ${isMenuOpen ? 'open' : ''}`}>
-            <a href="">Home</a>
-            <a href="">Brands</a>
-            <a href="">Recent Products</a>
-            <a href="">Contact</a>
-            <a href="">About</a>
+            <a href="/">Home</a>
+            <a href="#">Brands</a>
+            <a href="#">Recent Products</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
           </div>
 
           <div className="items_left">
             <span><AiOutlineSearch /></span>
+            <a href="/login">
             <span><BsFillPersonFill /></span>
+              </a>
             <span><AiOutlineShoppingCart /></span>
           </div>
 

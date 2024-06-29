@@ -11,12 +11,20 @@ export const productApi = api.injectEndpoints({
       providesTags:["Product"]
     }),
 
+    postSignIn: build.mutation({
+      query: (body) => ({
+        url: "/auth/sign-in",
+        method: "POST",
+        body,
+      }),
+      invalidatesTags: ["User"],
+    }),
  
   }),
  
 })
 
 export const {
- 
+  usePostSignInMutation,
   useGetProductsQuery,
 } = productApi
